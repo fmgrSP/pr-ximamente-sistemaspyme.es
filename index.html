@@ -42,14 +42,16 @@
       justify-content: center;
     }
 
-    /* Píldora Premium */
+    /* Píldora Premium con efecto Glow */
     .logo-pill {
       background: #ffffff;
       padding: 16px 48px;
       border-radius: 9999px;
-      <comment-tag id="1">box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(45, 212, 191, 0.15);</comment-tag id="1" text="box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 30px rgba(45, 212, 191, 0.6), 0 0 60px rgba(45, 212, 191, 0.2);
-
-Al aumentar la opacidad y añadir una segunda capa de sombra turquesa más extendida (60px), logramos un auténtico efecto 'glow' o resplandor de neón muy elegante y tecnológico que hará que el logo destaque muchísimo más sobre el fondo oscuro." type="suggestion">
+      /* Múltiples capas de sombra para un resplandor realista y potente */
+      box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.4), 
+        0 0 30px rgba(45, 212, 191, 0.6), 
+        0 0 60px rgba(45, 212, 191, 0.2);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -131,7 +133,6 @@ Al aumentar la opacidad y añadir una segunda capa de sombra turquesa más exten
     <!-- Contenedor del Logo en Píldora -->
     <div class="logo-wrapper">
       <div class="logo-pill">
-        <!-- He cambiado el color del texto alternativo a oscuro para que se vea sobre la píldora blanca si falla la imagen -->
         <img src="logo.png" alt="Sistemas Pyme" class="logo-img" onerror="this.onerror=null; this.src='https://placehold.co/400x120/ffffff/0f766e?text=Sistemas+Pyme';">
       </div>
     </div>
