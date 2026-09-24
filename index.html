@@ -42,12 +42,12 @@
       justify-content: center;
     }
 
-    /* Píldora Premium con efecto Glow */
+    /* Píldora Premium con efecto Glow Turquesa */
     .logo-pill {
       background: #ffffff;
       padding: 16px 48px;
       border-radius: 9999px;
-      /* Múltiples capas de sombra para un resplandor realista y potente */
+      /* Múltiples capas de sombra para un resplandor turquesa realista y potente */
       box-shadow: 
         0 15px 35px rgba(0, 0, 0, 0.4), 
         0 0 30px rgba(45, 212, 191, 0.6), 
@@ -83,12 +83,11 @@
       margin-bottom: 32px;
     }
 
+    /* Banner animado al completo */
     .status-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(15, 118, 110, 0.15);
-      border: 1px solid rgba(15, 118, 110, 0.3);
       color: #5eead4;
       padding: 8px 16px;
       border-radius: 9999px;
@@ -96,6 +95,9 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1px;
+      /* La animación ahora se aplica a todo el banner */
+      animation: badge-pulse 2.5s infinite ease-in-out;
+      border: 1px solid rgba(45, 212, 191, 0.5);
     }
 
     .pulse {
@@ -103,14 +105,26 @@
       height: 8px;
       background-color: #2dd4bf;
       border-radius: 50%;
-      box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.7);
-      animation: pulse-animation 2s infinite;
+      /* El puntito ya no necesita su propia animación ni sombra, acompaña al texto */
     }
 
-    @keyframes pulse-animation {
-      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.7); }
-      70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(45, 212, 191, 0); }
-      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(45, 212, 191, 0); }
+    /* Nueva animación para que "respire" todo el banner */
+    @keyframes badge-pulse {
+      0% { 
+        transform: scale(0.98); 
+        box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.4); 
+        background: rgba(15, 118, 110, 0.15);
+      }
+      50% { 
+        transform: scale(1.03); 
+        box-shadow: 0 0 0 12px rgba(45, 212, 191, 0); 
+        background: rgba(15, 118, 110, 0.35); /* El fondo se ilumina un poco más */
+      }
+      100% { 
+        transform: scale(0.98); 
+        box-shadow: 0 0 0 0 rgba(45, 212, 191, 0); 
+        background: rgba(15, 118, 110, 0.15);
+      }
     }
 
     @keyframes fadeIn {
